@@ -1,13 +1,11 @@
 import usePosts from "./data/hooks/use-posts";
+import PostList from "./ui/components/post-lists/post-lists";
 
 export default function Home() {
   const { posts } = usePosts();
   return (
-    <>
-      <h1>Lista de posts</h1>
-      {posts.map((post) => {
-        return { post };
-      })}
-    </>
+    <main>
+      <PostList posts={posts} />
+    </main>
   );
 }
